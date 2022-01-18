@@ -1,0 +1,11 @@
+import { {{name}} } from "./{{name}}"
+import { {{name}}Props } from "./{{name}}.types"
+
+export default {
+    title: '{{name}}',
+    component: {{name}},
+  };
+
+const Template = (args: {{name}}Props) => <{{name}} {...args} />;
+
+export const InitialStory = Template.bind({});
