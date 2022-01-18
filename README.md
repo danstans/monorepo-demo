@@ -23,6 +23,13 @@ This turborepo has some additional tools already setup for you:
 - [Jest](https://jestjs.io) test runner for all things JavaScript
 - [Prettier](https://prettier.io) for code formatting
 
+### Get started
+
+```
+cd monorepo
+yarn
+```
+
 ### Build
 
 To build all apps and packages, run the following command:
@@ -43,7 +50,7 @@ cd monorepo
 yarn run dev
 ```
 
-Because each app/project is its own monorepo, you can run `yarn run dev` from within its own repository.
+Alternatively, because each project/app is its own workspace you can run `yarn run dev` from within its own directory.
 
 ### Plopfile
 
@@ -68,5 +75,5 @@ yarn run dev
 cd monorepo
 yarn run plop
 <!-- make changes to the created component and rapidly iterate using storybook -->
-
+..
 ```
