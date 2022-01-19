@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 
-import UserInputCard from "../../components/UserInputCard/UserInputCard";
+import UserInputCard from "@kariko/components/UserInputCard/UserInputCard";
 import { UserInputContainerProps } from "./types";
 
 const UserInputContainer = (props: UserInputContainerProps) => {
