@@ -4,6 +4,9 @@
   "main": "./index.ts",
   "types": "./index.tsx",
   "license": "MIT",
+  "resolutions": {
+    "**/@emotion/styled": "^11.0.0"
+  },
   "devDependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",

@@ -1,11 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles/index.css";
+import Index from "./pages/Index";
+import { UiProvider } from "ui";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UiProvider>
+      <Index />
+    </UiProvider>
   </React.StrictMode>,
-  document.getElementById('root')
-)
+  document.getElementById("root")
+);
