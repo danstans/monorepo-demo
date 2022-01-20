@@ -11,12 +11,16 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "plop": "plop"
+    "test": "turbo run test",
+    "plop": "plop",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.2.2",
+    "plop": "^3.0.5",
     "prettier": "^2.5.1",
-    "turbo": "latest",
-    "plop": "^3.0.5"
+    "turbo": "latest"
   },
   "turbo": {
     "pipeline": {
@@ -29,6 +33,7 @@
           ".next/**"
         ]
       },
+      "test": {},
       "lint": {
         "outputs": []
       },
@@ -36,6 +41,17 @@
         "cache": false
       }
     }
+  },
+  "lint-staged": {
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
   },
   "engines": {
     "npm": ">=7.0.0",
