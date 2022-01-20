@@ -2,9 +2,8 @@ import React from "react";
 import { useState } from "react";
 
 import UserInputCard from "@kariko/components/UserInputCard/UserInputCard";
-import { UserInputContainerProps } from "./types";
 
-const UserInputContainer = (props: UserInputContainerProps) => {
+const UserInputContainer = () => {
   const [count, setCount] = useState(0);
 
   return (

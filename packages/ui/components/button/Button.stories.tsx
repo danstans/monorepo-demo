@@ -1,17 +1,18 @@
 import { Button } from "./Button";
 import { ButtonProps } from "./Button.types";
+import { Meta, Story } from "@storybook/react";
 
 export default {
   title: "Button",
   component: Button,
-};
+} as Meta;
 
 const Template = (args: ButtonProps) => <Button {...args}>Hello world</Button>;
 
-export const FirstStory = Template.bind({
-  type: "primary",
-});
+export const FirstStory: Story<ButtonProps> = Template.bind({});
 
-export const SecondStory = Template.bind({
-  type: "secondary",
-});
+FirstStory.args = {};
+
+export const SecondStory: Story<ButtonProps> = Template.bind({});
+
+SecondStory.args = {};

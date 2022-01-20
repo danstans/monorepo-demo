@@ -5,7 +5,7 @@ import { UserInputCardProps } from "./types";
 function UserInputCard({ count, text, setCount }: UserInputCardProps) {
   return (
     <div>
-      <Button type={"secondary"} onClick={setCount}>
+      <Button btnVariant={"secondary"} onClick={setCount}>
         {text}
         {count}
       </Button>
