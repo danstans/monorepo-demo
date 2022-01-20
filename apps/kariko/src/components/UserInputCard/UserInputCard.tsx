@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import { Button } from "ui";
-import { UserInputCardProps } from './types';
+import { UserInputCardProps } from "./types";
 
 function UserInputCard({ count, text, setCount }: UserInputCardProps) {
   return (

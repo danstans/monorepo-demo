@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const WelcomeContainer = () => {
   return (
@@ -28,6 +28,6 @@ const WelcomeContainer = () => {
       </p>
     </header>
   );
-}
+};
 
 export default WelcomeContainer;

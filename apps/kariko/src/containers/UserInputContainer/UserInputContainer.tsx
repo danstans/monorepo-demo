@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 
 import UserInputCard from "@kariko/components/UserInputCard/UserInputCard";
@@ -9,13 +9,8 @@ const UserInputContainer = (props: UserInputContainerProps) => {
 
   return (
     <div>
-      This is a container maintains its own state/logic and may return multiple
-      components.
-      <UserInputCard
-        text={'Button text'}
-        count={count}
-        setCount={() => setCount(count + 1)}
-      />
+      This is a container maintains its own state/logic and may return multiple components.
+      <UserInputCard text={"Button text"} count={count} setCount={() => setCount(count + 1)} />
     </div>
   );
 };

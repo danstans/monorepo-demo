@@ -10,5 +10,5 @@ ReactDOM.render(
       <Index />
     </UiProvider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );

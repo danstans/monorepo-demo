@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { ButtonProps } from "./Button.types";
 import MaterialButton from "@mui/material/Button";
 
@@ -6,13 +6,10 @@ const sharedSyles = {
   fontWeight: "bold",
 };
 
-export const Button = ({
-  type = "primary",
-  onClick,
-  children,
-}: ButtonProps): JSX.Element => {
+export const Button = (props: ButtonProps): JSX.Element => {
+  const { btnVariant = "primary", onClick, children, type = "button" } = props;
   const getButtonStyles = () => {
-    switch (type) {
+    switch (btnVariant) {
       case "primary":
         return {
           ...sharedSyles,
@@ -36,9 +33,11 @@ export const Button = ({
 
   return (
     <MaterialButton
+      type={type}
       variant={"contained"}
       onClick={onClick}
       sx={getButtonStyles()}
+      {...props}
     >
       {children}
     </MaterialButton>

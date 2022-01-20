@@ -1,5 +1,3 @@
 import UserInputContainer from "./UserInputContainer";
 
-export {
-    UserInputContainer
-}
+export { UserInputContainer };

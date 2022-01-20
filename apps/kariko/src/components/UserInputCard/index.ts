@@ -1,5 +1,3 @@
 import UserInputCard from "./UserInputCard";
 
-export {
-    UserInputCard
-}
+export { UserInputCard };

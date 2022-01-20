@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "@kariko/styles/App.css";
 
 const DefaultLayout = ({ children }: React.PropsWithChildren<{}>) => {
