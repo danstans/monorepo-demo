@@ -74,5 +74,4 @@ yarn run dev
 cd monorepo
 yarn run plop
 <!-- make changes to the created component and rapidly iterate using storybook -->
-..
 ```
