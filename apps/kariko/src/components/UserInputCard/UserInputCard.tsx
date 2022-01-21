@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "ui";
+import { Button } from "pacemaker";
 import { UserInputCardProps } from "./types";
 
 function UserInputCard({ count, text, setCount }: UserInputCardProps) {

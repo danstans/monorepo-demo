@@ -36,41 +36,41 @@ module.exports = function (plop) {
     actions: [
       {
         type: "add",
-        path: "packages/ui/components/{{toKebab name}}/{{pascalCase name}}.tsx",
+        path: "packages/pacemaker/components/{{toKebab name}}/{{pascalCase name}}.tsx",
         templateFile: "packages/plop-templates/components/component.hbs",
       },
       {
         type: "add",
-        path: "packages/ui/components/{{toKebab name}}/{{pascalCase name}}.stories.tsx",
+        path: "packages/pacemaker/components/{{toKebab name}}/{{pascalCase name}}.stories.tsx",
         templateFile: "packages/plop-templates/components/stories.hbs",
       },
       {
         type: "add",
-        path: "packages/ui/components/{{toKebab name}}/{{pascalCase name}}.types.ts",
+        path: "packages/pacemaker/components/{{toKebab name}}/{{pascalCase name}}.types.ts",
         templateFile: "packages/plop-templates/components/types.hbs",
       },
       {
         type: "add",
-        path: "packages/ui/components/{{toKebab name}}/index.tsx",
+        path: "packages/pacemaker/components/{{toKebab name}}/index.tsx",
         templateFile: "packages/plop-templates/components/index.hbs",
       },
       {
         // Adds an index.js file if it does not already exist
         type: "add",
-        path: "packages/ui/index.ts",
+        path: "packages/pacemaker/index.ts",
         templateFile: "packages/plop-templates/injectable-index.ts.hbs",
         // If index.js already exists in this location, skip this action
         skipIfExists: true,
       },
       {
         type: "append",
-        path: "packages/ui/index.ts",
+        path: "packages/pacemaker/index.ts",
         pattern: `/* PLOP_INJECT_IMPORT */`,
         template: `import {{pascalCase name}} from './components/{{toKebab name}}';`,
       },
       {
         type: "append",
-        path: "packages/ui/index.ts",
+        path: "packages/pacemaker/index.ts",
         pattern: `/* PLOP_INJECT_EXPORT */`,
         template: `{{pascalCase name}},`,
       },

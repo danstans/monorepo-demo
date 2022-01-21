@@ -1,11 +1,11 @@
-import { FormInput, Button } from "ui";
+import { FormInput, Button } from "pacemaker";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import Grid from "@mui/material/Grid";
 
 /**
- * Capable form component built with react-hook-form. Currently supports TextInput (string, number).
+ * Capable form component is built with react-hook-form. This component currently supports TextInput - string and number.
  */
 const Form = ({ formData, onSubmit }: any): JSX.Element => {
   const { schema, defaultValues } = formData?.reduce(

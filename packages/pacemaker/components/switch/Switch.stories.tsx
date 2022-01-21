@@ -3,7 +3,7 @@ import { SwitchProps } from "./Switch.types";
 import { Meta, Story } from "@storybook/react";
 
 export default {
-  title: "Switch",
+  title: "Shared/Switch",
   component: CapableSwitch,
 } as Meta;
 

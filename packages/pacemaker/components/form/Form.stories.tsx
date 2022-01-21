@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions";
 import { nameForm } from "storybook/utils/formData";
 
 export default {
-  title: "Form",
+  title: "Shared/Form",
   component: Form,
 } as Meta;
 

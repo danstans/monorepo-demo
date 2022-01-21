@@ -2,7 +2,7 @@ import Input from "./Input";
 import { InputProps } from "./Input.types";
 
 export default {
-  title: "Input",
+  title: "Shared/Input",
   component: Input,
 };
 

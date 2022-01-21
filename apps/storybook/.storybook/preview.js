@@ -1,6 +1,6 @@
 import React from "react"
-import { UiProvider, muiTheme } from "ui";
-// import { ThemeProvider } from 'emotion-theming';
+import { UiProvider } from "pacemaker";
+import { addParameters } from "@storybook/react";
 
 
 export const decorators = [
@@ -12,6 +12,18 @@ export const decorators = [
     </UiProvider>
   ),
 ]
+
+
+addParameters({
+  options: {
+    storySort: {
+      order: [
+        "Welcome",
+        "*"
+      ]
+    }
+  }
+});
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

@@ -19,7 +19,7 @@ function getPackageDir(filepath) {
 }
 
 module.exports = {
-    stories: ["../../../packages/ui/components/**/*.stories.@(js|jsx|ts|tsx)"],
+    stories: ["../../../packages/pacemaker/docs/Welcome.stories.mdx",  "../../../packages/pacemaker/**/**/*.stories.@(js|jsx|ts|tsx|mdx)"],
     addons: [
       "@storybook/addon-links",
       "@storybook/addon-essentials",
