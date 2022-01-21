@@ -46,7 +46,7 @@ module.exports = function (plop) {
       },
       {
         type: "add",
-        path: "packages/ui/components/{{toKebab name}}/{{pascalCase name}}.types.tsx",
+        path: "packages/ui/components/{{toKebab name}}/{{pascalCase name}}.types.ts",
         templateFile: "packages/plop-templates/components/types.hbs",
       },
       {
