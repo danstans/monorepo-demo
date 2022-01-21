@@ -9,6 +9,7 @@ const FormInput = (props: FormInputProps) => {
       control={props.control}
       render={({ field: { onChange, value }, fieldState: { error } }) => (
         <Input
+          fullWidth
           onChange={(e: any) => {
             const newSyntheticEvent = { ...e };
             if (props.type === "number") {

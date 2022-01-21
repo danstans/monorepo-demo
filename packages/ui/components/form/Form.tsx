@@ -2,7 +2,11 @@ import { FormInput, Button } from "ui";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import Grid from "@mui/material/Grid";
 
+/**
+ * Capable form component built with react-hook-form. Currently supports TextInput (string, number).
+ */
 const Form = ({ formData, onSubmit }: any): JSX.Element => {
   const { schema, defaultValues } = formData?.reduce(
     (prev: any, curr: any) => {
@@ -41,10 +45,29 @@ const Form = ({ formData, onSubmit }: any): JSX.Element => {
         onSubmit(d);
       })}
     >
-      {formData?.map((formObject: any) => {
-        const { name, schema, props } = formObject;
-        return getFormComponentByZodType(name, schema, props);
-      })}
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        {formData?.map((formObject: any, formObjectIndex: number) => {
+          const {
+            name,
+            schema,
+            props,
+            breakpoints: { xs, sm, md, lg },
+          } = formObject;
+          return (
+            <Grid
+              item
+              xs={xs}
+              sm={sm || xs}
+              md={md || sm || xs}
+              lg={lg || md || sm || xs}
+              key={formObjectIndex}
+            >
+              {getFormComponentByZodType(name, schema, props)}
+            </Grid>
+          );
+        })}
+      </Grid>
+
       <Button type="submit">Submit</Button>
     </form>
   );

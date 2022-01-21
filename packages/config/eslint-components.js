@@ -29,6 +29,6 @@ module.exports = {
         "@typescript-eslint/no-empty-function": 0,
         "@typescript-eslint/explicit-module-boundary-types": 0
       },
-      "ignorePatterns": ["dist"],
+      "ignorePatterns": ["dist", "storybook-static", "node_modules"],
       "globals": { "JSX": true }
     }

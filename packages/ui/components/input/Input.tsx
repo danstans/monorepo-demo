@@ -2,7 +2,16 @@ import { TextField } from "@mui/material";
 import { InputProps } from "./Input.types";
 
 const Input = (props: InputProps): JSX.Element => {
-  const { label, errorMessage, onChange, value, type = "string", disabled } = props;
+  const {
+    label,
+    errorMessage,
+    onChange,
+    value,
+    size = "small",
+    type = "string",
+    disabled,
+    fullWidth,
+  } = props;
   return (
     <TextField
       label={label}
@@ -12,7 +21,8 @@ const Input = (props: InputProps): JSX.Element => {
       value={value}
       type={type}
       disabled={disabled}
-      size="small"
+      size={size}
+      fullWidth={fullWidth}
     />
   );
 };

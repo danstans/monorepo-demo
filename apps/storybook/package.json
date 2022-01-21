@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "start-storybook --no-manager-cache --quiet -p 6007",
-    "build": "build-storybook"
+    "build": "build-storybook",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "17.0.2",
