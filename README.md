@@ -8,9 +8,8 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package ma
 
 ### Apps and Packages
 
-- `internal-nextjs-project`: a [Next.js](https://nextjs.org) app
 - `kariko`: a [react ts vite](https://vitejs.dev/) app
-- `ui`: a stub React component library utilized by both all `apps` applications
+- `pacemaker`: Capables React component library utilized by any `apps` applications
 - `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
@@ -28,6 +27,16 @@ This turborepo has some additional tools already setup for you:
 ```
 cd monorepo
 yarn
+<!-- This will run all workspace projects with a dev script -->
+yarn dev
+```
+
+This project uses yarn workspaces
+
+```
+cd monorepo
+<!-- This will specifically run yarn dev for the kariko workspace -->
+yarn workspace kariko dev
 ```
 
 ### Build
@@ -36,21 +45,11 @@ To build all apps and packages, run the following command:
 
 ```
 cd monorepo
+<!-- This will build all workspaces with turborepo cacheing -->
 yarn run build
 ```
 
 Because this app has is initialized with turborepo, builds and their artifacts are cached. You can test this by running the above command, making a change to `apps/kariko/App.tsx` and then running the above command again. The build time should be substantially faster because it is only rebuilding Kariko.
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd monorepo
-yarn run dev
-```
-
-Alternatively, because each project/app is its own workspace you can run `yarn run dev` from within its own directory.
 
 ### Plopfile
 
