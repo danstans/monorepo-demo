@@ -1,5 +1,5 @@
-import CapableSwitch from "./Switch";
-import { SwitchProps } from "./Switch.types";
+import CapableSwitch from "../components/switch/Switch";
+import { SwitchProps } from "../components/switch/Switch.types";
 import { Meta, Story } from "@storybook/react";
 
 export default {

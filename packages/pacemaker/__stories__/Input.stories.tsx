@@ -1,5 +1,5 @@
-import Input from "./Input";
-import { InputProps } from "./Input.types";
+import Input from "../components/input/Input";
+import { InputProps } from "../components/input/Input.types";
 
 export default {
   title: "Shared/Input",

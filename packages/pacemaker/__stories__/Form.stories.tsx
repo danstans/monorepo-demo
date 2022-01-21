@@ -1,5 +1,5 @@
-import Form from "./Form";
-import { FormProps } from "./Form.types";
+import Form from "../components/form/Form";
+import { FormProps } from "../components/form/Form.types";
 import { Meta, Story } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 

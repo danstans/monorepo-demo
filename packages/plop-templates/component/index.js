@@ -18,22 +18,22 @@ plop.setGenerator("component", {
       {
         type: "add",
         path: "packages/pacemaker/components/{{dashCase name}}/{{pascalCase name}}.tsx",
-        templateFile: "packages/plop-templates/components/component.hbs",
+        templateFile: "packages/plop-templates/component/component.hbs",
       },
       {
         type: "add",
-        path: "packages/pacemaker/components/{{dashCase name}}/{{pascalCase name}}.stories.tsx",
-        templateFile: "packages/plop-templates/components/stories.hbs",
+        path: "packages/pacemaker/__stories__/{{pascalCase name}}.stories.tsx",
+        templateFile: "packages/plop-templates/component/stories.hbs",
       },
       {
         type: "add",
         path: "packages/pacemaker/components/{{dashCase name}}/{{pascalCase name}}.types.ts",
-        templateFile: "packages/plop-templates/components/types.hbs",
+        templateFile: "packages/plop-templates/component/types.hbs",
       },
       {
         type: "add",
         path: "packages/pacemaker/components/{{dashCase name}}/index.tsx",
-        templateFile: "packages/plop-templates/components/index.hbs",
+        templateFile: "packages/plop-templates/component/index.hbs",
       },
       {
         // Adds an index.js file if it does not already exist
@@ -47,7 +47,7 @@ plop.setGenerator("component", {
         type: "append",
         path: "packages/pacemaker/index.ts",
         pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{pascalCase name}} from './components/{{dashCase name}}';`,
+        template: `import { {{pascalCase name}} } from './components/{{dashCase name}}';`,
       },
       {
         type: "append",
