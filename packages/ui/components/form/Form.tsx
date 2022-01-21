@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
-export const Form = ({ formData, onSubmit }: any): JSX.Element => {
+const Form = ({ formData, onSubmit }: any): JSX.Element => {
   const { schema, defaultValues } = formData?.reduce(
     (prev: any, curr: any) => {
       return {
@@ -49,3 +49,5 @@ export const Form = ({ formData, onSubmit }: any): JSX.Element => {
     </form>
   );
 };
+
+export default Form;

@@ -1,4 +1,4 @@
-import { Form } from "./Form";
+import Form from "./Form";
 import { FormProps } from "./Form.types";
 import { Meta, Story } from "@storybook/react";
 

@@ -5,7 +5,7 @@ const sharedSyles = {
   fontWeight: "bold",
 };
 
-export const Button = (props: ButtonProps): JSX.Element => {
+const Button = (props: ButtonProps): JSX.Element => {
   const { btnVariant = "primary", onClick, children, type = "button" } = props;
   const getButtonStyles = () => {
     switch (btnVariant) {
@@ -42,3 +42,5 @@ export const Button = (props: ButtonProps): JSX.Element => {
     </MaterialButton>
   );
 };
+
+export default Button;
