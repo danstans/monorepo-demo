@@ -4,7 +4,7 @@ Concept for a monorepository utilizing yarn workspaces, shared configuration fil
 
 ## What's inside?
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+This turborepo uses [pnpm](https://pnpm.io/) as a package manager. This manager utilizes symlinks to reduce the amount of package duplication. This can vastly speed up CI times, as installs can often be the culprit to long times.
 
 ### Apps and Packages
 
@@ -26,9 +26,9 @@ This turborepo has some additional tools already setup for you:
 
 ```
 cd monorepo
-yarn
+pnpm i
 <!-- This will run all workspace projects with a dev script -->
-yarn dev
+pnpm dev
 ```
 
 This project uses yarn workspaces
@@ -36,7 +36,7 @@ This project uses yarn workspaces
 ```
 cd monorepo
 <!-- This will specifically run yarn dev for the kariko workspace -->
-yarn workspace kariko dev
+pnpm --filter kariko dev
 ```
 
 ### Build
@@ -46,7 +46,7 @@ To build all apps and packages, run the following command:
 ```
 cd monorepo
 <!-- This will build all workspaces with turborepo cacheing -->
-yarn run build
+pnpm build
 ```
 
 Because this app has is initialized with turborepo, builds and their artifacts are cached. You can test this by running the above command, making a change to `apps/kariko/App.tsx` and then running the above command again. The build time should be substantially faster because it is only rebuilding Kariko.
@@ -72,6 +72,6 @@ yarn run dev
 
 <!-- in a different terminal -->
 cd monorepo
-yarn run plop
+pnpm plop
 <!-- make changes to the created component and rapidly iterate using storybook -->
 ```

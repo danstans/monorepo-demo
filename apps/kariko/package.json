@@ -1,25 +1,26 @@
 {
   "name": "kariko",
   "version": "0.0.0",
-  "scripts": {
-    "dev": "vite --port 4000",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "lint": "eslint ."
-  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
     "@vitejs/plugin-react": "^1.0.7",
-    "config": "*",
+    "config": "0.0.0",
     "eslint": "7.32.0",
-    "tsconfig": "*",
+    "pacemaker": "workspace:*",
+    "tsconfig": "workspace:*",
     "typescript": "^4.5.4",
     "vite": "^2.7.2",
     "vite-tsconfig-paths": "^3.3.17"
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite --port 4000",
+    "lint": "eslint .",
+    "preview": "vite preview"
   }
 }
