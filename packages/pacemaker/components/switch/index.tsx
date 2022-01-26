@@ -1,3 +1,3 @@
-import CapableSwitch from "./Switch";
+import Switch from "./Switch";
 
-export { CapableSwitch };
+export { Switch };
