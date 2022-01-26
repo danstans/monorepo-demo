@@ -1,41 +1,43 @@
 import { ButtonProps } from "./Button.types";
 import MaterialButton from "@mui/material/Button";
+import { Color, Theme } from "@mui/material";
 
 const sharedSyles = {
   fontWeight: "bold",
 };
 
 const Button = (props: ButtonProps): JSX.Element => {
-  const { btnVariant = "primary", onClick, children, type = "button" } = props;
-  const getButtonStyles = () => {
-    switch (btnVariant) {
-      case "primary":
-        return {
-          ...sharedSyles,
-          backgroundColor: "theme.palette.secondary.main",
-          color: "theme.palette.text.primary",
-          ":hover": {
-            backgroundColor: "theme.palette.secondary.dark",
-            color: "theme.palette.primary.contrastText",
-          },
-        };
+  const { color = "primary", onClick, children, type = "button", disabled } = props;
+
+  const getVariant = () => {
+    switch (color) {
       case "secondary":
-        return {
-          ...sharedSyles,
-        };
-      case "tertiary":
-        return {
-          ...sharedSyles,
-        };
+        return "outlined";
+      default:
+        return "contained";
+    }
+  };
+
+  const getTypography = () => {
+    switch (color) {
+      case "secondary":
+        return "outlinedBtn";
+      default:
+        return "containedBtn";
     }
   };
 
   return (
     <MaterialButton
       type={type}
-      variant={"contained"}
+      variant={getVariant()}
       onClick={onClick}
-      sx={getButtonStyles()}
+      color={color}
+      disableElevation
+      disabled={disabled}
+      sx={{
+        typography: getTypography(),
+      }}
       {...props}
     >
       {children}

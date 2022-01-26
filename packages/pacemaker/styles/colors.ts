@@ -1,6 +1,6 @@
 export const colors = {
   darkLapis: "#000096",
-  lapis: "#0000CB",
+  lapis: "#0000C8",
   lightLapis: "#9999E9",
   lighterLapis: "#E5E5F9",
   lightestLapis: "#F2F2FC",
@@ -17,7 +17,8 @@ export const colors = {
   indigoDark: "#00008b",
   indigo: "#0000BD",
   indigoLight: "#5f38f1",
-  darkGrey: "#40404F",
+  darkGrey: "#020228",
+  helperDarkGrey: "#40404F",
   lightGrey4: "#e0e0e0",
   lightGrey3: "#E5E5E5",
   lightGrey2: "#CBCBCB",
@@ -27,4 +28,5 @@ export const colors = {
   innerBorder: "#E5E5E5",
   switchGreen1: "#00AD79",
   switchGreen2: "#89D9C2",
+  lapisDark: "#000095",
 };

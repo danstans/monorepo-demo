@@ -4,16 +4,19 @@ import { colors } from "./colors";
 export const muiTheme = {
   palette: {
     primary: {
-      light: colors.lightLapis,
       main: colors.lapis,
-      dark: colors.darkLapis,
+      dark: colors.lapisDark,
       contrastText: colors.white,
     },
     secondary: {
-      light: colors.lightSpring,
-      main: colors.spring,
+      main: colors.lapis,
       dark: colors.darkSpring,
       contrastText: colors.darkGrey,
+    },
+    tertiary: {
+      main: colors.darkGrey,
+      dark: colors.helperDarkGrey,
+      contrastText: colors.white,
     },
     error: {
       light: colors.rubyLight,
@@ -37,6 +40,7 @@ export const muiTheme = {
     },
     text: {
       primary: colors.darkGrey,
+      paper: colors.white,
     },
     background: {
       default: colors.lightGrey1,
@@ -65,6 +69,20 @@ export const muiTheme = {
     h5: {
       fontFamily: "Rubik, sans-serif",
       fontSize: "1.25rem",
+    },
+    containedBtn: {
+      fontWeight: 700,
+      fontSize: "1rem",
+      textTransform: "none",
+      lineHeight: "1.5rem",
+      letterSpacing: ".3px",
+    },
+    outlinedBtn: {
+      fontWeight: 400,
+      fontSize: "1rem",
+      textTransform: "none",
+      lineHeight: "1.5rem",
+      letterSpacing: ".3px",
     },
   },
   spacing: 8,
@@ -132,3 +150,10 @@ theme = responsiveFontSizes(theme);
 
 // @ts-ignore
 window.theme = theme;
+
+// 3. Update the Button's color prop options
+declare module "@mui/material/Button" {
+  interface ButtonPropsColorOverrides {
+    tertiary: true;
+  }
+}
