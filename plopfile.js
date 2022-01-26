@@ -1,5 +1,5 @@
-const Component = require("plop-templates/component");
-const Hook = require("plop-templates/hook")
+const Component = require("./packages/plop-templates/component");
+const Hook = require("./packages/plop-templates/hook")
 
 module.exports = function (plop) {
   Component(plop);

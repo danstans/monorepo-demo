@@ -114,6 +114,7 @@ importers:
       '@emotion/react': ^11.7.1
       '@emotion/styled': ^11.6.0
       '@hookform/resolvers': ^2.8.8
+      '@mui/base': ^5.0.0-alpha.66
       '@mui/icons-material': ^5.3.0
       '@mui/lab': ^5.0.0-alpha.65
       '@mui/material': ^5.3.0
@@ -144,6 +145,7 @@ importers:
     devDependencies:
       '@emotion/react': 11.7.1_@types+react@17.0.38
       '@emotion/styled': 11.6.0_c68c7fc8cd61cc1f46a7af031a899d39
+      '@mui/base': 5.0.0-alpha.66_@types+react@17.0.38
       '@mui/icons-material': 5.3.1_41b584ab6867b7069a149f81ac688947
       '@mui/lab': 5.0.0-alpha.66_4c623b0f133cfde635a4f9535f9e5213
       '@mui/material': 5.3.1_33451a27fb0f2d9c89b4a673a7cc54a1

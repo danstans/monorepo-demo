@@ -1,10 +1,5 @@
 import { ButtonProps } from "./Button.types";
 import MaterialButton from "@mui/material/Button";
-import { Color, Theme } from "@mui/material";
-
-const sharedSyles = {
-  fontWeight: "bold",
-};
 
 const Button = (props: ButtonProps): JSX.Element => {
   const { color = "primary", onClick, children, type = "button", disabled } = props;
