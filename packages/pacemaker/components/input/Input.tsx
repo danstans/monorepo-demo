@@ -14,6 +14,7 @@ const Input = (props: InputProps): JSX.Element => {
   } = props;
   return (
     <TextField
+      {...props}
       label={label}
       error={!!errorMessage}
       helperText={errorMessage}
