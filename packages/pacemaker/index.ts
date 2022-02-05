@@ -1,4 +1,5 @@
 /* PLOP_INJECT_IMPORT */
+import { CapableCalendar } from './components/capable-calendar';
 import { ButtonChoice } from "./components/button-choice";
 import { Switch } from "./components/switch";
 import { Input, FormInput } from "./components/input";
@@ -9,6 +10,7 @@ import muiTheme from "./styles";
 
 export {
   /* PLOP_INJECT_EXPORT */
+	CapableCalendar,
   ButtonChoice,
   Switch,
   FormInput,

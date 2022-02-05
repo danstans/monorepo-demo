@@ -2,6 +2,10 @@
   "name": "pacemaker",
   "version": "0.0.0",
   "dependencies": {
+    "@devexpress/dx-core": "^3.0.0",
+    "@devexpress/dx-react-core": "^3.0.0",
+    "@devexpress/dx-react-scheduler": "^3.0.0",
+    "@devexpress/dx-react-scheduler-material-ui": "^3.0.0",
     "@hookform/resolvers": "^2.8.8",
     "eslint": "7.32.0",
     "react-hook-form": "^7.24.1",

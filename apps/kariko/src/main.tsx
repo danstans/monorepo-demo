@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./styles/index.css";
-import Index from "./pages/Index";
-import { UiProvider } from "pacemaker";
+import React, { StrictMode } from "react";
+import { render } from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <UiProvider>
-      <Index />
-    </UiProvider>
-  </React.StrictMode>,
+import FileRoutes from "./routes";
+
+render(
+  <StrictMode>
+    <BrowserRouter>
+      <FileRoutes />
+    </BrowserRouter>
+  </StrictMode>,
   document.getElementById("root"),
 );
