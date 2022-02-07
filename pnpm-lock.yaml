@@ -30,6 +30,7 @@ importers:
       react: ^17.0.2
       react-dom: ^17.0.2
       react-flow-renderer: ^9.7.3
+      react-location: ^3.3.4
       react-router: ^6.2.1
       react-router-config: ^5.1.1
       react-router-dom: ^6.2.1
@@ -43,6 +44,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-flow-renderer: 9.7.3_react-dom@17.0.2+react@17.0.2
+      react-location: 3.3.4_react-dom@17.0.2+react@17.0.2
       react-router: 6.2.1_react@17.0.2
       react-router-config: 5.1.1_react-router@6.2.1+react@17.0.2
     devDependencies:
@@ -14647,6 +14649,18 @@ packages:
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
+
+  /react-location/3.3.4_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-XA1FLPh8qAO1aMmw80nY+QvLiPnQ1E2nXEWCpTTlqk1kQ+s9LsixMInGgzt/6AC6NnHW6PavpwnCZjs3e/ezow==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@babel/runtime': 7.16.7
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
 
   /react-popper-tooltip/3.1.1:
     resolution: {integrity: sha512-EnERAnnKRptQBJyaee5GJScWNUKQPDD2ywvzZyUjst/wj5U64C8/CnSYLNEmP2hG0IJ3ZhtDxE8oDN+KOyavXQ==}

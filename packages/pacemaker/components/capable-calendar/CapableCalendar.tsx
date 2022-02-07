@@ -1,7 +1,11 @@
 import { CapableCalendarProps } from "./CapableCalendar.types";
-import * as React from "react";
 import Paper from "@mui/material/Paper";
-import { SchedulerDateTime, ViewState } from "@devexpress/dx-react-scheduler";
+import {
+  SchedulerDateTime,
+  ViewState,
+  EditingState,
+  IntegratedEditing,
+} from "@devexpress/dx-react-scheduler";
 import {
   Scheduler,
   DayView,
@@ -12,24 +16,46 @@ import {
   DateNavigator,
   TodayButton,
   MonthView,
+  AppointmentTooltip,
+  ConfirmationDialog,
 } from "@devexpress/dx-react-scheduler-material-ui";
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import { WeekViewTimeTableCell } from "./styled/WeekViewTimeTableCell";
 import { WeekViewDayScaleCell } from "./styled/WeekViewDayScaleCell";
+import { Content } from "./styled/AppointmentTooltipContent";
+import moment from ".pnpm/moment@2.29.1/node_modules/moment";
+import { Button } from "../button";
+import { ViewSwitcherComponent } from "./styled/ViewSwitcherComponent";
 
 const CapableCalendar = (props: CapableCalendarProps): JSX.Element => {
-  const [currentDate, setCurrentDate] = useState<SchedulerDateTime>("2018-11-01");
+  const [currentDate, setCurrentDate] = useState<SchedulerDateTime>(moment().format("YYYY-MM-DD"));
 
-  const { appointments } = props;
+  const { appointments, onCommitChanges } = props;
 
-  const StyledTimeScale = styled(WeekView.TimeScaleLayout)(({ theme }) => ({
+  const StyledTimeScale = styled(WeekView.TimeScaleLayout)(() => ({
     height: "75px",
   }));
 
-  const FlexibleSpaceComponent = styled(Toolbar.FlexibleSpace)(({ theme }) => ({
+  const FlexibleSpaceComponent = styled(Toolbar.FlexibleSpace)(() => ({
     paddingRight: "12px",
   }));
+
+  const StyledNavigationButton = ({ type, onClick }: any) => {
+    return (
+      <Button
+        color="secondary"
+        onClick={onClick}
+        sx={{
+          marginLeft: "12px",
+          padding: "6.4px 0",
+          minWidth: "42px",
+        }}
+      >
+        {type === "forward" ? ">" : "<"}
+      </Button>
+    );
+  };
 
   return (
     <Paper variant="outlined">
@@ -51,13 +77,23 @@ const CapableCalendar = (props: CapableCalendarProps): JSX.Element => {
         />
 
         <MonthView />
-        <Toolbar
-          flexibleSpaceComponent={() => <FlexibleSpaceComponent>Dropdown</FlexibleSpaceComponent>}
-        />
-        <DateNavigator />
+        <Toolbar flexibleSpaceComponent={() => <FlexibleSpaceComponent></FlexibleSpaceComponent>} />
+        <ViewSwitcher switcherComponent={ViewSwitcherComponent} />
+        <DateNavigator navigationButtonComponent={StyledNavigationButton} />
         <TodayButton />
-        <ViewSwitcher />
         <Appointments />
+        <EditingState onCommitChanges={onCommitChanges} />
+        <IntegratedEditing />
+        <ConfirmationDialog
+          ignoreCancel
+          messages={{
+            cancelButton: "No, go back",
+            deleteButton: "Yes, cancel appointmnet",
+            confirmDeleteMessage: "Are you sure you want to cancel this appointment?",
+          }}
+        />
+
+        <AppointmentTooltip contentComponent={Content} showDeleteButton showCloseButton />
       </Scheduler>
     </Paper>
   );

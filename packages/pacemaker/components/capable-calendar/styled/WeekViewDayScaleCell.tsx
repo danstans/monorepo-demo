@@ -11,12 +11,13 @@ const StyledWeekViewDayScaleCell = styled(WeekView.DayScaleCell)(({ theme }) => 
 }));
 
 export const WeekViewDayScaleCell = (props: any) => {
-  const { startDate, today } = props;
+  const { today } = props;
 
   if (today) {
     return (
       <StyledWeekViewDayScaleCell {...props} className={"capable-weekview-dayscalecell__today"} />
     );
   }
-  return <StyledWeekViewDayScaleCell {...props} />;
+
+  return <StyledWeekViewDayScaleCell {...props}>asdfasdfasd</StyledWeekViewDayScaleCell>;
 };

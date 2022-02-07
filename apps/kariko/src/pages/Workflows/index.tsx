@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProviderFlow from "@kariko/containers/Workflows/ProviderFlow";
-import WorkflowSidebar from "@kariko/containers/Workflows/WorkflowSidebar";
+import { WorkflowSidebar } from "@kariko/containers/Workflows/WorkflowSidebar";
 import { Elements, ReactFlowProvider, useStoreActions, XYPosition } from "react-flow-renderer";
 
 const position: XYPosition = { x: 0, y: 0 };

@@ -116,19 +116,26 @@ export const muiTheme = {
         },
       },
     },
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          boxShadow: "none",
-        },
-      },
-    },
+    // MuiPaper: {
+    //   styleOverrides: {
+    //     root: {
+    //       boxShadow: "none",
+    //     },
+    //   },
+    // },
     MuiAccordion: {
       styleOverrides: {
         root: {
           "&:before": {
             backgroundColor: "transparent",
           },
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
         },
       },
     },

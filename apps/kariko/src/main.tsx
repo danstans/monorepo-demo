@@ -2,12 +2,12 @@ import React, { StrictMode } from "react";
 import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import FileRoutes from "./routes";
+import { Routes } from "./routes";
 
 render(
   <StrictMode>
     <BrowserRouter>
-      <FileRoutes />
+      <Routes />
     </BrowserRouter>
   </StrictMode>,
   document.getElementById("root"),
