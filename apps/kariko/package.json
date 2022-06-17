@@ -2,24 +2,22 @@
   "name": "kariko",
   "version": "0.0.0",
   "dependencies": {
-    "elkjs": "^0.7.3-dev",
+    "generouted": "^1.3.1",
     "history": "^5.2.0",
+    "jotai": "^1.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-flow-renderer": "^9.7.3",
     "react-location": "^3.3.4",
-    "react-router": "^6.2.1",
-    "react-router-config": "^5.1.1"
+    "react-query": "^3.39.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
-    "@types/react-router-config": "^5.0.6",
     "@vitejs/plugin-react": "^1.0.7",
     "config": "0.0.0",
     "eslint": "7.32.0",
     "pacemaker": "workspace:*",
-    "react-router-dom": "^6.2.1",
+    "ts-node": "^10.5.0",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.4",
     "vite": "^2.7.2",
@@ -29,6 +27,7 @@
     "build": "tsc && vite build",
     "dev": "vite --port 4000",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "codegen": "npx @rtk-query/codegen-openapi openapi-config.ts"
   }
 }
